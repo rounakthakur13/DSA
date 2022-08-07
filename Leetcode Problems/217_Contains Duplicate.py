@@ -1,10 +1,11 @@
 nums= [1,5,-2,-4,-4]
-visited = set()
+
 def containsduplicate(nums):
+    visited = set()
     for i in range(len(nums)):
         if nums[i] in visited:
             return True
         else:
-            visited = nums[i]
+            visited.add(nums[i])
     return False
 print(containsduplicate(nums)) 

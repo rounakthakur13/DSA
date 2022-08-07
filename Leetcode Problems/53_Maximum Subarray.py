@@ -1,11 +1,10 @@
-num= [-2,1,-3,4,-1,2,1,-5,4]
-maxsum = num[1]
-currentsum = 0
-n =0 
-def maxSubrray(num):
+num= [1]
+def maxSubrray(currentsum,maxsum,n):
+    if n == len(num):
+        return maxsum
     if currentsum<0:
         currentsum = 0
     currentsum += num[n]
     maxsum = max(maxsum,currentsum)
-    return maxSubrray(num[n+1])
-print(maxSubrray(num))
+    return maxSubrray(currentsum,maxsum,n+1)
+print(maxSubrray(num[0],0,1))
