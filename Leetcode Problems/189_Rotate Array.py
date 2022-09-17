@@ -1,5 +1,5 @@
 nums = [-1,-100,3,99]
-k = 2
+k = 5
 k = k%len(nums)
 l = 0
 r = len(nums)-1
