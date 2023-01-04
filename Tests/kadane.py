@@ -1,13 +1,13 @@
-def maxsum(a):
-    currsum = 0
-    maxsum = 0
-    for i in range(len(a)):
+def maxsum(nums):
+    currsum = nums[0]
+    maxsum = nums[0]
+    for i in range(1,len(nums)):
         if currsum < 0:
             currsum = 0
-        currsum += a[i]
+        currsum += nums[i]
         maxsum = max(currsum, maxsum)
     return maxsum
 
 
-a = [-2, -1]
-print(maxsum(a))
+nums =[1]
+print(maxsum(nums))
